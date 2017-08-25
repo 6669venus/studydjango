@@ -1,0 +1,16 @@
+{
+  "name": "studydjango",
+  "description": "My django studying",
+  "image": "heroku/python",
+  "repository": "https://github.com/6669venus/studydjango.git",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
+}
