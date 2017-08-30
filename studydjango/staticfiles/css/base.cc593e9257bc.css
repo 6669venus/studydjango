@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'junctionregular';
-    src: url('Junction-regular-webfont.eot');
-    src: url('Junction-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Junction-regular-webfont.woff') format('woff'),
-         url('Junction-regular-webfont.ttf') format('truetype');
+    src: url("Junction-regular-webfont.f0616bfbba00.eot");
+    src: url("Junction-regular-webfont.f0616bfbba00.eot?#iefix") format('embedded-opentype'),
+         url("Junction-regular-webfont.1dbde238d738.woff") format('woff'),
+         url("Junction-regular-webfont.fcf4b7b8379e.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,7 +21,7 @@ html {
 }
 
 .input-field input[type=text]:focus {
-    border-bottom: 5px solid #fff;
+    border-bottom: 2px solid #fff;
     box-shadow: 0 1px 0 0 #fff;
 }
 
