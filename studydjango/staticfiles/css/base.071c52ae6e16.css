@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'junctionregular';
+    src: url("Junction-regular-webfont.f0616bfbba00.eot");
+    src: url("Junction-regular-webfont.f0616bfbba00.eot?#iefix") format('embedded-opentype'),
+         url("Junction-regular-webfont.1dbde238d738.woff") format('woff'),
+         url("Junction-regular-webfont.fcf4b7b8379e.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: junctionregular, sans-serif;
+}
+
+/*.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {*/
+/* color: #FFFFFF !important;*/
+/*}*/
+
+/*.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {*/
+/* border-bottom: 1px solid #FFFFFF !important;*/
+/* box-shadow: 0 1px 0 0 #FFFFFF !important;*/
+/*}*/
+
+.input-field input[type=text]:focus + label {
+    color: #000 !important;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000 !important;
+}

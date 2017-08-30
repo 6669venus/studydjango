@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'junctionregular';
+    src: url('Junction-regular-webfont.eot');
+    src: url('Junction-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Junction-regular-webfont.woff') format('woff'),
+         url('Junction-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: junctionregular, sans-serif;
+}
+
+.input-field label {
+    color: #fff;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #fff;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.input-field input[type=text].valid {
+border-bottom: 1px solid #fff;
+box-shadow: 0 1px 0 0 #fff;
+}
+
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.input-field .prefix.active {
+    color: #fff;
+}
+    

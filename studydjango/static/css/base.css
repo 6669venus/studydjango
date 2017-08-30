@@ -12,11 +12,30 @@ html {
     font-family: junctionregular, sans-serif;
 }
 
-.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
- color: white !important;
+.input-field label {
+    color: #fff;
 }
 
-.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
- border-bottom: 1px solid white !important;
- box-shadow: 0 1px 0 0 white !important;
+.input-field input[type=text]:focus + label {
+    color: #fff;
 }
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.input-field .prefix.active {
+    color: #fff;
+}
+    
