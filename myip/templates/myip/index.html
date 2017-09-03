@@ -29,7 +29,7 @@
           <div>Current javascript IP: <span id="javascriptIP">processing..</span></div>
         </div>
         <div class="col s2 right-align">
-          <a class="waves-effect waves-light btn deep-orange accent-4">Save</a>
+          <a class="waves-effect waves-light btn deep-orange accent-4" onclick="save_myip()">Save</a>
         </div>
       </div>
       
@@ -82,7 +82,24 @@
   $(document).ready(function () {
     baseInit();
     setMyIp($('#javascriptIP'));
+    
+
   });
+  
+  function save_myip() {
+    $.ajax({
+      url: 'save_myip',
+      type: "post",
+      cache: false,
+      data: {
+        pythonIP: $("#pythonIP").text(),
+        javascriptIP: $("#javascriptIP").text()
+      },
+      success: function(data) {
+        alert("success");
+      }
+    });
+  }
   </script>
 
   </body>
