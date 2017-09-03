@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^save_myip$', views.save_myip, name='save_myip'),
 ]

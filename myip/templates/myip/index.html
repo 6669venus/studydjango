@@ -45,8 +45,8 @@
         <tbody>
         {% for myip in myips %}
           <tr>
-            <td>{{ myip.created_date }}</td>
-            <td>{{ myip.created_date }}</td>
+            <td>{{ myip.created_date|date:'d F Y' }}</td>
+            <td>{{ myip.created_date|date:'H:i' }}</td>
             <td>{{ myip.myipaddress }}</td>
           </tr>
         
