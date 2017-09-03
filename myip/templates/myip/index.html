@@ -6,22 +6,14 @@
   <title>studydjango</title>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="static/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="static/css/base.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/base.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body class="">
+<body class="cyan lighten-2">
   <div class="navbar-fixed z-depth-0">
   <nav class="grey lighten-5 z-depth-0" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container center" href="#" class="brand-logo cyan-text accent-3">6669venus</a>
-      <ul class="right">
-        <li><a href="#" class="cyan-text accent-3">course</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">mobil</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a id="logo-container center" href="#" class="brand-logo cyan-text accent-3">myip</a>
     </div>
   </nav>
   </div>
@@ -29,40 +21,39 @@
   <div class="container">
     <br><br>
     <div class="row">
-      <div class="col s6">
-        
-      <div class="row">
-        <h1 class="white-text">Hello</h1>
-      </div>
-      
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="signup-email" type="email">
-          <label for="signup-email">Email</label>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="signup-password" type="password" class="validate">
-          <label for="signup-password">Password</label>
-        </div>
-      </div>
-      
+      <div class="col l12 xl6">
+
       <div class="row valign-wrapper">
-        <div class="col s6">
-          Already have an account? Log In
+        <div class="col m12">
+          <div>Current python IP: <span id="pythonIP">{{ yourip }}</span></div>
+          <div>Current javascript IP: <span id="javascriptIP">100.100.100.11</span></div>
         </div>
-        <div class="col s6 right-align">
-          <a class="waves-effect waves-light btn-large deep-orange accent-4">Sign Up</a>
+        <div class="col s2 right-align">
+          <a class="waves-effect waves-light btn deep-orange accent-4">Save</a>
         </div>
       </div>
       
-      <div class="row">
-        <div class="col s12">
-          By signing up, you agree to the Terms of Service and Privacy Policy
-        </div>
-      </div>
+       <table class="striped">
+        <thead>
+          <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>IP from JS/Python</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for myip in myips %}
+          <tr>
+            <td>{{ myip.created_date }}</td>
+            <td>{{ myip.created_date }}</td>
+            <td>{{ myip.myipaddress }}</td>
+          </tr>
+        
+        {% endfor %}
+        </tbody>
+      </table>
+
     
       
         
@@ -70,15 +61,22 @@
 
       </div>
 
+<form action="" method="post">{% csrf_token %}
+</form>
     </<div>
     
 
   </div>
   
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="static/js/materialize.min.js"></script>
-  <script src="static/js/base.js"></script>
+  <script src="../static/js/jquery-3.2.1.min.js"></script>
+  <script src="../static/js/materialize.min.js"></script>
+  <script src="../static/js/base.js"></script>
+  <script>
+  $(document).ready(function () {
+    baseInit();testt();
+  });
+  </script>
 
   </body>
 </html>
