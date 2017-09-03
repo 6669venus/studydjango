@@ -24,6 +24,17 @@ function baseInit() {
     });
 }
 
-function testt() {
-    console.log("Test");
+function setMyIp(toSpan) {
+    $.getJSON('//api.ipify.org?format=jsonp&callback=?', function(data) {
+        toSpan.text(data.ip);
+    });
+    //return "Ok " + ip;
+    // var res = $.ajax({
+    //     url: '//api.ipify.org?format=jsonp&callback=',
+    //     async: false
+    // }).responseText;
+
+    // console.log("'" + res + "'");
+    // return res;
+    
 }
