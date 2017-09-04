@@ -40,8 +40,8 @@ $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
 $secondary-color: color("deep-orange", "accent-4") !default;
-$success-color: color("green", "base") !default;
-$error-color: color("red", "base") !default;
+$success-color: color("light-green", "accent-3") !default;
+$error-color: color("red", "accent-3") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
 
@@ -166,7 +166,8 @@ $input-border: 2px solid $input-border-color !default;
 $input-background: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
+//$input-focus-color: $secondary-color !default;
+$input-focus-color: color("shades", "white") !default;
 $input-font-size: 1.4rem !default;
 $input-margin-bottom: 20px;
 $input-margin: 0 0 $input-margin-bottom 0 !default;

@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'junctionregular';
-    src: url('Junction-regular-webfont.eot');
-    src: url('Junction-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Junction-regular-webfont.woff') format('woff'),
-         url('Junction-regular-webfont.ttf') format('truetype');
+    src: url("Junction-regular-webfont.f0616bfbba00.eot");
+    src: url("Junction-regular-webfont.f0616bfbba00.eot?#iefix") format('embedded-opentype'),
+         url("Junction-regular-webfont.1dbde238d738.woff") format('woff'),
+         url("Junction-regular-webfont.fcf4b7b8379e.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,7 @@
 html {
     font-family: junctionregular, sans-serif;
 }
-.input-font-1 {
+.input-font1 {
     font-family:sans-serif;
     color:white;
     font-size:1.7rem !important;
