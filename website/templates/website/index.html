@@ -8,6 +8,30 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="static/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="static/css/base.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#dd2c00"
+    }
+  },
+  "theme": "edgeless",
+  "content": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "dismiss": "Got it!",
+    "link": "Learn more",
+    "href": "cookiesandyou.com"
+  }
+})});
+</script>
+
 </head>
 <body class="cyan lighten-2">
   <div class="navbar-fixed z-depth-0">
@@ -34,7 +58,7 @@
       <div class="row">
         <h1 class="white-text">Hello</h1>
       </div>
-      <form>
+      <form action="" method="post">{% csrf_token %}
         <div class="row">
           <div class="input-field col s12">
             <input id="signup-email" type="email" class="validate input-font-1">
@@ -51,11 +75,12 @@
       
         <div class="row valign-wrapper">
           <div class="col s6">
-            Already have an account? Log In
+            <a class="waves-effect waves-light btn-large deep-orange accent-4" onclick="signup()">Sign Up</a>
           </div>
           <div class="col s6 right-align">
-            <a class="waves-effect waves-light btn-large deep-orange accent-4">Sign Up</a>
+            Already have an account? Log In
           </div>
+
         </div>
         
       </form>
@@ -198,6 +223,34 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="static/js/materialize.min.js"></script>
   <script src="static/js/base.js"></script>
+<script>
 
+
+</script>
+
+
+<script>
+  $(document).ready(function () {
+    baseInit();
+
+  });
+  
+  function signup() {
+    $.ajax({url:'signup',type:"post",cache:false,data:{
+        signup_email: $("#signup-email").val(),
+        signup_password: $("#signup-password").val()
+      },
+      success: function(data) {
+        console.log("success");
+      },
+      error: function(xhr,status,error) {
+        console.log("error: " + error + " " + status + " " + xhr);
+      }
+    });
+  }
+</script>
+  
+  
+  
   </body>
 </html>
