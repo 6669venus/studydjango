@@ -59,29 +59,7 @@ window.cookieconsent.initialise({
         <h1 class="white-text">Hello</h1>
       </div>
       <form action="" method="post">{% csrf_token %}
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="signup-email" type="email" class="validate input-font-1">
-            <label for="signup-email">Email</label>
-          </div>
-        </div>
-      
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="signup-password" type="password" class="validate input-font-1">
-            <label for="signup-password">Password</label>
-          </div>
-        </div>
-      
-        <div class="row valign-wrapper">
-          <div class="col s6">
-            <a class="waves-effect waves-light btn-large deep-orange accent-4" onclick="signup()">Sign Up</a>
-          </div>
-          <div class="col s6 right-align">
-            Already have an account? Log In
-          </div>
-
-        </div>
+{% include "account/login.html" %}
         
       </form>
 
@@ -236,7 +214,7 @@ window.cookieconsent.initialise({
   });
   
   function signup() {
-    $.ajax({url:'signup',type:"post",cache:false,data:{
+    $.ajax({url:'account/signup',type:"post",cache:false,data:{
         signup_email: $("#signup-email").val(),
         signup_password: $("#signup-password").val()
       },
